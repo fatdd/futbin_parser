@@ -29,7 +29,7 @@ headers = {
 
 data = pd.DataFrame(columns=['URL', 'old_price', 'SBC'])
 
-url = "https://www.futbin.com/players?page=" + str(4) + "&version=non_icons&sort=ps_price&order=desc"
+url = "https://www.futbin.com/players?page=" + str(4) + "&version=non_icons&sort=pc_price&order=desc"
 driver = uc.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
 driver.get(url)
 requiredHtml = driver.page_source
