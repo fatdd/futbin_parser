@@ -40,7 +40,7 @@ version_list = ['versus_fire', 'winter_wildcards', 'headliners_2', 'headliners',
 print(version_list)
 
 for version in version_list:
-    url = f"https://www.futbin.com/22/players?page=1&version={version}&sort=ps_price&order=desc"
+    url = f"https://www.futbin.com/23/players?page=1&version={version}&sort=pc_price&order=desc"
 
     driver = uc.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
     driver.get(url)
@@ -53,7 +53,7 @@ for version in version_list:
         url_player = "https://www.futbin.com" + player
         url_list.append(url_player)
     if len(players) == 30:
-        url = f"https://www.futbin.com/22/players?page=2&version={version}&sort=ps_price&order=desc"
+        url = f"https://www.futbin.com/23/players?page=2&version={version}&sort=pc_price&order=desc"
         driver = uc.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), options=chrome_options)
         driver.get(url)
         requiredHtml = driver.page_source
